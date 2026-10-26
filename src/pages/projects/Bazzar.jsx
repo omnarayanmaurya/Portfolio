@@ -20,11 +20,28 @@ import { Navbar } from "@/layout/Navbar";
 import { Footer } from "@/layout/Footer";
 
 // Add four screenshots to public/projects/bazzar/ using these exact filenames.
+// Add four screenshots to public/projects/bazzar/ using these exact filenames.
 const projectImages = [
-  { src: "/projects/bazzar/home.png", alt: "Bazzar e-commerce home page", title: "Home Page" },
-  { src: "/projects/bazzar/collection.png", alt: "Bazzar product collection", title: "Product Collection" },
-  { src: "/projects/bazzar/product-details.png", alt: "Bazzar product details page", title: "Product Details" },
-  { src: "/projects/bazzar/cart.png", alt: "Bazzar shopping cart and checkout", title: "Cart & Checkout" },
+  {
+    title: "Home Page",
+    src: "/projects/bazzar/home.png",
+    alt: "Bazzar home page",
+  },
+  {
+    title: "Cart Page",
+    src: "/projects/bazzar/cart.png",
+    alt: "Bazzar shopping cart page",
+  },
+  {
+    title: "Products Page",
+    src: "/projects/bazzar/products.png",
+    alt: "Bazzar products page",
+  },
+  {
+    title: "Shop Page",
+    src: "/projects/bazzar/shop.png",
+    alt: "Bazzar shop page",
+  },
 ];
 
 // Add your URLs here when ready. Buttons appear automatically once a URL is added.

@@ -5,72 +5,53 @@ import { useNavigate } from "react-router-dom";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
-
 {
-  title: "Vyavastha — Project Management Platform",
+title: "Vyavastha — Project Management Platform",
+description:
+"A full-stack project management platform enabling teams to create projects, assign tasks, set deadlines, track progress, and collaborate through real-time project-specific chat.",
+image: "/projects/vyavastha/dashboard.png",
+tags: [
+"React",
+"Node.js",
+"Express.js",
+"MongoDB",
+"Tailwind CSS",
+"Socket.IO",
+"JWT",
+],
+link: "#",
+github: "#",
+details: "/projects/vyavastha",
+},
+{
+  title: "Bazzar — MERN E-Commerce Platform",
   description:
-    "A full-stack project management platform enabling teams to create projects, assign tasks, set deadlines, track progress, and collaborate through real-time project-specific chat.",
-  image: "/projects/vyavastha/home.png",
-  tags: [
-    "React",
-    "Node.js",
-    "Express.js",
-    "MongoDB",
-    "Tailwind CSS",
-    "Socket.IO",
-    "JWT",
-  ],
+    "A full-stack MERN e-commerce platform featuring product listings, category filtering, user authentication, shopping cart management, and checkout functionality.",
+  image: "/projects/bazzar/home.png",
+  tags: ["React", "Express.js", "MongoDB", "Tailwind CSS"],
   link: "#",
   github: "#",
-  details: "/projects/vyavastha",
+  details: "/projects/bazzar",
 },
-
-  {
-    title: "Bazzar — MERN E-Commerce Platform",
-    description:
-      "A full-stack MERN e-commerce platform featuring product listings, category filtering, user authentication, shopping cart management, and checkout functionality.",
-    image: "/projects/project2.png",
-    tags: ["React", "Express.js", "MongoDB", "Tailwind CSS"],
-    link: "#",
-    github: "#",
-    details: "/projects/bazzar",
-  },
-  // {
-  //   title: "E-Commerce Platform",
-  //   description:
-  //     "A full-featured e-commerce solution with product management, shopping cart functionality, payment integration, and order processing.",
-  //   image: "/projects/project2.png",
-  //   tags: ["React", "Node.js", "MongoDB", "Payments"],
-  //   link: "#",
-  //   github: "#",
-  // },
-  {
-    title: "QuickAI — AI SaaS Platform",
-    description:
-      "An AI-powered platform offering article writing, blog title generation, AI image generation, background and object removal, resume review, and a community image gallery.",
-    image: "/projects/quickai/home.png",
-    tags: [
-      "React",
-      "Node.js",
-      "Express.js",
-      "PostgreSQL",
-      "Clerk",
-      "AI APIs",
-    ],
-    link: "https://quick-ai-bice-eight.vercel.app",
-    github: "https://github.com/omnarayanmaurya/QuickAI",
-    details: "/projects/quickai",
-  },
-  // {
-  //   title: "Project Management Tool",
-  //   description:
-  //     "A project management application designed to organize tasks, track progress, and help teams manage their work efficiently.",
-  //   image: "/projects/project4.png",
-  //   tags: ["React", "TypeScript", "Node.js", "Database"],
-  //   link: "#",
-  //   github: "#",
-  // },
+{
+title: "QuickAI — AI SaaS Platform",
+description:
+"An AI-powered platform offering article writing, blog title generation, AI image generation, background and object removal, resume review, and a community image gallery.",
+image: "/projects/quickai/home.png",
+tags: [
+"React",
+"Node.js",
+"Express.js",
+"PostgreSQL",
+"Clerk",
+"AI APIs",
+],
+link: "https://quick-ai-bice-eight.vercel.app",
+github: "https://github.com/omnarayanmaurya/QuickAI",
+details: "/projects/quickai",
+},
 ];
+
 
 export const Projects = () => {
   const navigate = useNavigate();

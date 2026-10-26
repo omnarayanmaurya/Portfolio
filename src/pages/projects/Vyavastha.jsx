@@ -25,24 +25,24 @@ import { Footer } from "@/layout/Footer";
 // using these exact filenames.
 const projectImages = [
   {
-    src: "/projects/vyavastha/home.png",
-    alt: "Vyavastha project management dashboard",
+    src: "/projects/vyavastha/dashboard.png",
+    alt: "Vyavastha Dashboard",
     title: "Dashboard",
   },
   {
     src: "/projects/vyavastha/projects.png",
-    alt: "Vyavastha project overview",
-    title: "Project Overview",
+    alt: "Vyavastha Projects",
+    title: "Projects",
+  },
+  {
+    src: "/projects/vyavastha/team.png",
+    alt: "Vyavastha Team",
+    title: "Team Collaboration",
   },
   {
     src: "/projects/vyavastha/tasks.png",
-    alt: "Vyavastha task management interface",
+    alt: "Vyavastha Tasks",
     title: "Task Management",
-  },
-  {
-    src: "/projects/vyavastha/team-chat.png",
-    alt: "Vyavastha project-specific team chat",
-    title: "Team Chat",
   },
 ];
 
