@@ -9,6 +9,8 @@ import {
 
 import Home from "@/pages/Home";
 import QuickAI from "@/pages/projects/QuickAI";
+import Bazzar from "@/pages/projects/Bazzar";
+import Vyavastha from "@/pages/projects/Vyavastha";
 
 // Reset scroll position whenever the route changes
 function ScrollToTop() {
@@ -33,6 +35,8 @@ function App() {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/projects/quickai" element={<QuickAI />} />
+        <Route path="/projects/bazzar" element={<Bazzar />} />
+        <Route path="/projects/vyavastha" element={<Vyavastha />} />
       </Routes>
     </BrowserRouter>
   );

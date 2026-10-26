@@ -5,24 +5,45 @@ import { useNavigate } from "react-router-dom";
 import { AnimatedBorderButton } from "@/components/AnimatedBorderButton";
 
 const projects = [
+
+{
+  title: "Vyavastha — Project Management Platform",
+  description:
+    "A full-stack project management platform enabling teams to create projects, assign tasks, set deadlines, track progress, and collaborate through real-time project-specific chat.",
+  image: "/projects/vyavastha/home.png",
+  tags: [
+    "React",
+    "Node.js",
+    "Express.js",
+    "MongoDB",
+    "Tailwind CSS",
+    "Socket.IO",
+    "JWT",
+  ],
+  link: "#",
+  github: "#",
+  details: "/projects/vyavastha",
+},
+
   {
-    title: "Fintech Dashboard",
+    title: "Bazzar — MERN E-Commerce Platform",
     description:
-      "A financial analytics dashboard for visualizing financial data, managing portfolios, and exploring insights.",
-    image: "/projects/project1.png",
-    tags: ["React", "TypeScript", "Node.js"],
-    link: "#",
-    github: "#",
-  },
-  {
-    title: "E-Commerce Platform",
-    description:
-      "A full-featured e-commerce solution with product management, shopping cart functionality, payment integration, and order processing.",
+      "A full-stack MERN e-commerce platform featuring product listings, category filtering, user authentication, shopping cart management, and checkout functionality.",
     image: "/projects/project2.png",
-    tags: ["React", "Node.js", "MongoDB", "Payments"],
+    tags: ["React", "Express.js", "MongoDB", "Tailwind CSS"],
     link: "#",
     github: "#",
+    details: "/projects/bazzar",
   },
+  // {
+  //   title: "E-Commerce Platform",
+  //   description:
+  //     "A full-featured e-commerce solution with product management, shopping cart functionality, payment integration, and order processing.",
+  //   image: "/projects/project2.png",
+  //   tags: ["React", "Node.js", "MongoDB", "Payments"],
+  //   link: "#",
+  //   github: "#",
+  // },
   {
     title: "QuickAI — AI SaaS Platform",
     description:
@@ -40,15 +61,15 @@ const projects = [
     github: "https://github.com/omnarayanmaurya/QuickAI",
     details: "/projects/quickai",
   },
-  {
-    title: "Project Management Tool",
-    description:
-      "A project management application designed to organize tasks, track progress, and help teams manage their work efficiently.",
-    image: "/projects/project4.png",
-    tags: ["React", "TypeScript", "Node.js", "Database"],
-    link: "#",
-    github: "#",
-  },
+  // {
+  //   title: "Project Management Tool",
+  //   description:
+  //     "A project management application designed to organize tasks, track progress, and help teams manage their work efficiently.",
+  //   image: "/projects/project4.png",
+  //   tags: ["React", "TypeScript", "Node.js", "Database"],
+  //   link: "#",
+  //   github: "#",
+  // },
 ];
 
 export const Projects = () => {
@@ -56,9 +77,7 @@ export const Projects = () => {
 
   const openProject = (project) => {
     if (project.details) {
-      navigate(project.details, {
-        state: { scrollToTop: true },
-      });
+      navigate(project.details);
     }
   };
 
@@ -179,7 +198,7 @@ export const Projects = () => {
                   ))}
                 </div>
 
-                {/* QuickAI Actions */}
+                {/* Project Actions */}
                 {project.details && (
                   <div className="flex flex-wrap gap-4 pt-2">
                     <button
@@ -194,27 +213,31 @@ export const Projects = () => {
                       <ArrowUpRight className="w-4 h-4" />
                     </button>
 
-                    <a
-                      href={project.link}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(event) => event.stopPropagation()}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      Live Demo
-                      <ArrowUpRight className="w-4 h-4" />
-                    </a>
+                    {project.link !== "#" && (
+                      <a
+                        href={project.link}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        Live Demo
+                        <ArrowUpRight className="w-4 h-4" />
+                      </a>
+                    )}
 
-                    <a
-                      href={project.github}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      onClick={(event) => event.stopPropagation()}
-                      className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
-                    >
-                      GitHub
-                      <Github className="w-4 h-4" />
-                    </a>
+                    {project.github !== "#" && (
+                      <a
+                        href={project.github}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        onClick={(event) => event.stopPropagation()}
+                        className="inline-flex items-center gap-2 text-sm font-medium text-muted-foreground hover:text-primary transition-colors"
+                      >
+                        GitHub
+                        <Github className="w-4 h-4" />
+                      </a>
+                    )}
                   </div>
                 )}
               </div>
